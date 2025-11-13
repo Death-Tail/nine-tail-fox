@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import Profile from "@/components/profile";
+import { Skills } from "@/components/skills";
 import Image from "next/image";
 
 export default function Home() {
@@ -18,6 +19,9 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 md:gap-4">
         <Profile/>
 
+        <div className="lg:col-span-8 space-y-3 md:space-y-4">
+        <Skills/>
+        </div>
         <Footer/>
         </div>
       </div>
