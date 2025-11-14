@@ -1,11 +1,11 @@
 {
   "name": "Dyari Ali",
   "short_name": "SHIN尾",
-  "description": "Personal portfolio and projects by Dyari Ali.",
+  "description": "Full-Stack Developer working with Nextjs, Typescript, Tailwind CSS, sometimes i work with WP, Flutter.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#e5e7f2",
-  "theme_color": "#0a0a0a",
+  "theme_color": "#478d4b",
   "orientation": "portrait",
   "scope": "/",
   "icons": [

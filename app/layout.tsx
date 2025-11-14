@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Press_Start_2P } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
 const pressStart2P = Press_Start_2P({
@@ -57,8 +59,40 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon" />
+        <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#e5e7f2" />
+
+
+        {/* JSON-LD structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Dyari Ali",
+              "url": "https://death-tail.vercel.app",
+              "sameAs": [
+                "https://github.com/Death-Tail",
+                "https://www.linkedin.com/in/dyarialitahir/",
+                "https://discord.com/users/death_tail",
+                "https://x.com/Death_Tail0331",
+                "https://www.instagram.com/dyari_ali_taher/"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className={`${pressStart2P.className} antialiased`}>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
