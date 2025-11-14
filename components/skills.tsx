@@ -1,95 +1,46 @@
-import { Badge } from "./ui/badge";
-import { Card } from "./ui/card";
+// components/skills.tsx
+import * as React from 'react';
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { SKILLS } from "@/lib/data/skills";
 
-export function Skills(){
-  return(
-    <div>
-      <Card className="p-4 md:p-5 bg-card border-2 border-border">
-              <h2 className="text-xs md:text-sm text-primary mb-3 glow-text">{"[ABILITIES]"}</h2>
-              <div className="flex flex-wrap gap-1.5">
-                {[
-                  "REACT",
-                  "NEXT.JS",
-                  "TYPESCRIPT",
-                  "TAILWIND",
-                  "NODE.JS",
-                  "FIREBASE",
-                  "PIXEL ART",
-                  "UI/UX",
-                  "ANIMATION",
-                ].map((skill) => (
-                  <Badge
-                    key={skill}
-                    variant="secondary"
-                    className="text-[7px] md:text-[8px] px-2 py-0.5 bg-secondary border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
+const LABELS: Record<keyof typeof SKILLS, string> = {
+  frontend: 'Frontend',
+  backend: 'Backend',
+  database: 'Database',
+  other: 'Other',
+  hobby: 'hobby',
+};
 
-            {/* Stats Section */}
-            <Card className="p-4 md:p-5 bg-card border-2 border-border mt-4">
-              <h2 className="text-xs md:text-sm text-primary mb-3 glow-text">{"[STATS]"}</h2>
-              <div className="space-y-3">
-                {/* Attack Stat */}
-                <div>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-[9px] text-accent">ATTACK</span>
-                    <span className="text-[9px] text-primary">95</span>
-                  </div>
-                  <div className="h-2 bg-secondary border border-border overflow-hidden">
-                    <div
-                      className="h-full bg-primary transition-all duration-500 glow-bar"
-                      style={{ width: "95%" }}
-                    ></div>
-                  </div>
-                </div>
+export function Skills() {
+  return (
+    <Card className="p-4 md:p- bg-card border-2 border-border">
+      <h2 className="text-xs md:text-sm text-primary">
+        [ABILITIES]
+      </h2>
 
-                {/* Defense Stat */}
-                <div>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-[9px] text-accent">DEFENSE</span>
-                    <span className="text-[9px] text-primary">88</span>
-                  </div>
-                  <div className="h-2 bg-secondary border border-border overflow-hidden">
-                    <div
-                      className="h-full bg-primary transition-all duration-500 glow-bar"
-                      style={{ width: "88%" }}
-                    ></div>
-                  </div>
-                </div>
+      {/* Same flex-wrap UI, with full-width headers per group */}
+      <div className="flex flex-wrap gap-1.5">
+        {(Object.keys(SKILLS) as (keyof typeof SKILLS)[]).map((key) => (
+          <React.Fragment key={key}>
+            <div className="w-full mt-1">
+              <h3 className="text-[9px] md:text-[10px] tracking-wide text-primary/80">
+                {LABELS[key]}
+              </h3>
+            </div>
 
-                {/* Speed Stat */}
-                <div>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-[9px] text-accent">SPEED</span>
-                    <span className="text-[9px] text-primary">92</span>
-                  </div>
-                  <div className="h-2 bg-secondary border border-border overflow-hidden">
-                    <div
-                      className="h-full bg-primary transition-all duration-500 glow-bar"
-                      style={{ width: "92%" }}
-                    ></div>
-                  </div>
-                </div>
-
-                {/* Magic Stat */}
-                <div>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-[9px] text-accent">MAGIC</span>
-                    <span className="text-[9px] text-primary">99</span>
-                  </div>
-                  <div className="h-2 bg-secondary border border-border overflow-hidden">
-                    <div
-                      className="h-full bg-primary transition-all duration-500 glow-bar"
-                      style={{ width: "99%" }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </Card>
-    </div>
-  )
+            {SKILLS[key].map((tool) => (
+              <Badge
+                key={`${key}-${tool}`}
+                variant="secondary"
+                className="text-[9px] md:text-[10px] px-2 py-0.5 bg-secondary border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                {tool}
+              </Badge>
+            ))}
+          </React.Fragment>
+        ))}
+      </div>
+    </Card>
+  );
 }

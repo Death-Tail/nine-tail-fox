@@ -15,17 +15,17 @@ export const metadata: Metadata = {
   generator: "Next.js",
   metadataBase: new URL("https://dyariali.com"),
   referrer: "origin-when-cross-origin",
-  description: "Full-stack developer specializing in Next.js ecosystem and modern web architecture.",
-  keywords: "full-stack, developer, portfolio, cyberpunk, web architecture , Next.js, React, Node.js, TypeScript, Tailwind CSS, PostgreSQL, erbil, hawler, death tail, SHIN尾, dyari ali, dyari ali taher, dyari",
+  description: "Full-Stack Developer working with Nextjs, Typescript, Tailwind CSS, sometimes i work with WP, Flutter.",
+  keywords: "full-stack developer, full stack developer, web developer, portfolio, pixel art, pixel portfolio, web architecture, Next.js, React, Node.js, TypeScript, Tailwind CSS, PostgreSQL, Erbil, Hawler, Slemani, Suly, Duhok, Kurd, Kurdish, Kurdi, Kurdistan, Bashur, Rojhalat, Bakur, Rojava, Dyari Ali, Dyari Ali Taher, Dyari Ali Tahir, Dyari Ale Taher, Dyari Ale Tahir, Dyari, SHIN尾, Death Tail, Lin, Ling, LinGREED, Deare, Diyare, Diyare Ali, Diyare Ale, Diyare Ali Taher, Diyare Ali Tahir, Diyare Ale Taher, Diyare Ale Tahir",
   creator: "Dyari Ali Tahir",
   openGraph: {
     title: "Dyari Ali Tahir",
-    description: "Full-stack developer specializing in Next.js ecosystem and modern web architecture.",
+    description: "Full-Stack Developer working with Nextjs, Typescript, Tailwind CSS, sometimes i work with WP, Flutter.",
     url: "https://dyariali.com",
     siteName: "Dyari Ali Tahir Portfolio",
     images: [
       {
-        url: "https://dyariali.com/OG.webp",
+        url: "https://dyariali.com/images/OGBanner.webp",
         width: 3000,
         height: 2000,
         alt: "Dyari Ali Tahir Portfolio",
@@ -37,16 +37,18 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dyari Ali Tahir",
-    description: "Full-stack developer specializing in Next.js ecosystem and modern web architecture.",
+    description: "Full-Stack Developer working with Nextjs, Typescript, Tailwind CSS, sometimes i work with WP, Flutter.",
     site: "@dyariali",
     creator: "@death_tail0331",
     images: [
-      "https://dyariali.com/OG.webp",
+      "https://dyariali.com/images/OGBanner.webp",
     ],
   },
   manifest: "/manifest.json",
   robots: { index: true, follow: true },
 }
+
+
 
 export default function RootLayout({
   children,

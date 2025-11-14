@@ -119,11 +119,8 @@
    ========================================= */
 
 @theme inline {
-  /* Primary Font - Used for all text */
-  --font-sans: "Press Start 2P", "Geist", "Geist Fallback";
-
-  /* Monospace Font - Used for code */
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: "Nunito", "Merriweather Sans", "Noto Sans JP", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Apply semantic color tokens to Tailwind */
   --color-background: var(--background);
@@ -220,14 +217,10 @@
   }
 }
 
-/* =========================================
-   EXAMPLE ALTERNATIVE THEMES
-   Uncomment and modify :root to switch themes
-   ========================================= */
 
-/*
+
+
 :root {
-  /* CYBERPUNK THEME - Blue & Pink */ /*
   --theme-bg-primary: oklch(0.08 0.02 270);
   --theme-bg-secondary: oklch(0.12 0.03 270);
   --theme-bg-tertiary: oklch(0.16 0.04 270);
@@ -244,16 +237,14 @@
   --theme-border: oklch(0.20 0.04 270);
   --theme-ring: oklch(0.65 0.25 260);
 
-  --theme-glow-primary: 0 0 10px var(--theme-brand-primary), 0 0 20px var(--theme-brand-primary), 0 0 30px var(--theme-brand-secondary);
+  --theme-glow-primary: 0 -10px 10px var(--theme-brand-primary), 0 0 20px var(--theme-brand-primary), 0 0 30px var(--theme-brand-secondary);
   --theme-glow-secondary: 0 0 5px var(--theme-brand-primary);
   --theme-pixel-border: 0 0 0 2px var(--theme-border), 0 0 0 4px var(--theme-brand-primary);
   --theme-radius: 0rem;
 }
-*/
 
-/*
+
 :root {
-  /* FOREST SPIRIT THEME - Green & Teal */ /*
   --theme-bg-primary: oklch(0.10 0.02 160);
   --theme-bg-secondary: oklch(0.14 0.03 160);
   --theme-bg-tertiary: oklch(0.18 0.04 160);
@@ -270,9 +261,60 @@
   --theme-border: oklch(0.22 0.04 160);
   --theme-ring: oklch(0.60 0.20 160);
 
-  --theme-glow-primary: 0 0 10px var(--theme-brand-primary), 0 0 20px var(--theme-brand-primary), 0 0 30px var(--theme-brand-secondary);
-  --theme-glow-secondary: 0 0 5px var(--theme-brand-primary);
-  --theme-pixel-border: 0 0 0 2px var(--theme-border), 0 0 0 4px var(--theme-brand-primary);
-  --theme-radius: 0rem;
+
 }
-*/
+
+:root {
+  --theme-bg-primary: oklch(0.93 0.015 280);
+  --theme-bg-secondary: oklch(0.95 0.01 290);
+  --theme-bg-tertiary: oklch(0.97 0.008 285);
+  --theme-bg-muted: oklch(0.90 0.012 275);
+
+  --theme-brand-primary: oklch(0.58 0.12 145);
+  --theme-brand-secondary: oklch(0.72 0.12 147);
+  --theme-brand-glow: oklch(0.65 0.11 150);
+
+  --theme-text-primary: oklch(0.25 0.02 280);
+  --theme-text-secondary: oklch(0.50 0.04 285);
+  --theme-text-accent: oklch(0.55 0.12 220);
+
+  --theme-border: oklch(0.80 0.02 280);
+  --theme-ring: oklch(0.65 0.15 25);
+
+
+  --background: var(--theme-bg-primary);
+  --foreground: var(--theme-text-primary);
+  --card: var(--theme-bg-secondary);
+  --card-foreground: var(--theme-text-primary);
+  --popover: var(--theme-bg-secondary);
+  --popover-foreground: var(--theme-text-primary);
+  --primary: var(--theme-brand-primary);
+  --primary-foreground: oklch(0.98 0.005 280);
+  --secondary: var(--theme-bg-tertiary);
+  --secondary-foreground: var(--theme-text-primary);
+  --muted: var(--theme-bg-muted);
+  --muted-foreground: var(--theme-text-secondary);
+  --accent: var(--theme-brand-secondary);
+  --accent-foreground: var(--theme-text-primary);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: var(--theme-border);
+  --input: var(--theme-border);
+  --ring: var(--theme-ring);
+  --chart-1: var(--theme-brand-primary);
+  --chart-2: var(--theme-brand-secondary);
+  --chart-3: oklch(0.60 0.10 240);
+  --chart-4: var(--theme-brand-glow);
+  --chart-5: oklch(0.68 0.12 35);
+  --radius: var(--theme-radius);
+  --sidebar: var(--theme-bg-secondary);
+  --sidebar-foreground: var(--theme-text-primary);
+  --sidebar-primary: var(--theme-brand-primary);
+  --sidebar-primary-foreground: oklch(0.98 0.005 280);
+  --sidebar-accent: var(--theme-bg-tertiary);
+  --sidebar-accent-foreground: var(--theme-text-primary);
+  --sidebar-border: var(--theme-border);
+  --sidebar-ring: var(--theme-ring);
+
+}
+
